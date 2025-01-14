@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulta Stock</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+    <header>
+    <h2>Consulta de Stock</h2>
+</header>
+</div>
+    <!-- Formulario de input -->
+    <input type="text" id="inputText" placeholder="Introducir codigo de barras">
+
+    <div id="result" style="margin-top: 20px; font-weight: bold;"></div>
+
+    <script>
+        // Detecta la tecla Enter en el input
+        document.getElementById('inputText').addEventListener('keydown', function(event) {
+            if (event.key === 'Enter') {
+                event.preventDefault(); // Evita el envío predeterminado
+
+                // Obtener el valor del input
+                let inputValue = this.value;
+
+                // Crear una solicitud AJAX
+                let xhr = new XMLHttpRequest();
+                xhr.open('POST', 'process.php', true);
+                xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+
+                // Enviar los datos al servidor
+                xhr.send('inputText=' + encodeURIComponent(inputValue));
+
+                // Recibir la respuesta del servidor
+                xhr.onreadystatechange = function() {
+                    if (xhr.readyState === 4 && xhr.status === 200) {
+                        // Mostrar el resultado en la página
+                        document.getElementById('result').innerHTML = xhr.responseText;
+                    }
+                };
+
+                // Limpiar el input después de enviar
+                this.value = '';
+            }
+        });
+    </script>
+</body>
+</html>
