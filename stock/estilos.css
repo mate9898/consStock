@@ -1,0 +1,376 @@
+
+
+body{
+  font-family: Arial, sans-serif; font-size: 14px; line-height: 1.6; color: #333; margin: 0; padding: 0; background-color: #f9f9f9;
+  background-color: rgb(255, 255, 255);
+}
+
+.logo{
+  width: 99%;
+  height: auto;
+  padding: 1;
+  margin-top: 1%;
+}
+
+.logo img {
+  width: 97%;
+  padding: 1%;
+  height: auto;
+}
+
+.containerPL {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  flex-wrap: wrap; 
+  justify-content: center; 
+  align-items: center;
+  padding-top: 6px;
+  padding-bottom: 6px;
+}
+.box {
+  min-width: 200px;
+  border-radius: 7px;
+  height: 25px; 
+  background-color: #fc0303; 
+  color: #ffffff; 
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+
+}
+
+.box2 {
+  min-width: 200px;
+  border-radius: 7px;
+  height: 25px;
+  background-color: #fc0303; 
+  color: #ffffff; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center; 
+  margin-top: 10px;
+}
+
+
+
+.menu {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Roboto';
+  width: 100vw;
+  height: 4%;
+}
+
+
+.menu label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 300px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.menu select {
+  width: 100%;
+  height: 35px;
+  padding: 5px;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.input input {
+  width: 300px;
+  height: 35px;
+  padding: 5px;
+  text-align: center;
+  background-color: lightgray;
+  border: none;
+  box-sizing: border-box;
+  margin-top: 30px;
+}
+
+.product-name-container {
+  text-align: left;
+  margin-bottom: 1px;
+  padding-left: 5px;
+}
+
+
+.boton {
+  padding: 2em;
+}
+
+.container.mt-5 {
+  width: auto;
+  height: 80%;
+  border-style: solid;
+  padding: 5px;
+}
+
+.dataCRS {
+  margin-top: 50px;
+  margin-left: 50px;
+  padding: 50px;
+  font-size: 20px;
+  margin-bottom: 50px;
+  text-align: justify;
+}
+
+#dataCRS {
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding: 50px;
+  font-size: 18px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.descImg {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 98%;
+  border-style: solid;
+  border-color: lightgray;
+  padding: 3px;
+  margin-bottom: 5px;
+}
+
+.imgProd {
+  width: 200px;
+  height: 200px;
+  max-width: 300px;
+  max-height: 300px;
+
+}
+
+#result {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-style: solid 2px;
+  border-color: #A2B5BB;
+}
+
+.product-name {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #000;
+  text-transform: uppercase;
+  margin: 0;
+  padding: 10px 0;
+  line-height: 1.2;
+  letter-spacing: 0.5px;
+}
+
+.product-name-left {
+  font-size: 2.0rem;
+  font-weight: 700;
+  color: #000;
+  text-transform: uppercase;
+  margin: 0;
+  padding: 1px ;
+  line-height: 1.2;
+  letter-spacing: 0.5px;
+  text-align: left;
+  background: none;
+}
+
+@media (max-width: 768px) {
+  .product-name, .product-name-left {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .product-name, .product-name-left {
+    font-size: 1.5rem;
+  }
+}
+
+/* Estilos para las secciones de descripción y especificaciones */
+.product-description-section,
+.specifications-section {
+  margin: 30px 20px;
+  text-align: left;
+}
+
+.section-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #000;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+  padding: 0;
+  background: none;
+  width: auto;
+}
+
+.description-content {
+  font-size: 1rem;
+  line-height: 1.4;
+  margin-bottom: 40px;
+}
+
+.specifications-content {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.spec-item {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.spec-label {
+  font-weight: 500;
+  color: #000;
+  min-width: 100px;
+}
+
+.spec-value {
+  font-weight: 400;
+  color: #000;
+  text-transform: uppercase;
+}
+
+.spec-value-price {
+  font-weight: 700;
+  color: #000;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+}
+
+/* Estilos para precio y referencia debajo del nombre del producto */
+.product-price-container {
+  margin: 15px 20px;
+  text-align: left;
+}
+
+.product-price {
+  font-weight: 700;
+  color: #000;
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+
+.product-details-container {
+  margin: 15px 20px;
+  text-align: left;
+}
+
+.product-detail-item {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  margin-bottom: 5px;
+}
+
+.detail-label {
+  font-weight: 500;
+  color: #000;
+  min-width: 100px;
+}
+
+.detail-value {
+  font-weight: 400;
+  color: #000;
+  text-transform: uppercase;
+}
+
+.detail-value-price {
+  font-weight: 700;
+  color: #000;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+}
+
+/* Línea separadora */
+.separator-line {
+  margin: 20px 0 20px 0;
+  border: none;
+  height: 1px;
+  background-color: #666;
+  width: 99vw;
+}
+
+
+@media (min-width: 992px) {
+  /* Carrusel de fotos más chico en escritorio */
+  #carouselfoto {
+    width: auto;
+    max-width: 720px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  #carouselfoto .carousel-inner img {
+    width: 100%;
+    height: auto;
+    max-height: 420px;
+    object-fit: contain;
+  }
+
+  .narrow-table {
+    width: auto;
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+    table-layout: fixed;
+  }
+
+  .narrow-table th,
+  .narrow-table td {
+    padding: 2px 4px;
+    font-size: 0.85rem;
+    white-space: nowrap;
+    text-align: center;
+  }
+
+
+  .stock-table th:first-child,
+  .stock-table td:first-child { /* sucursal */
+    width: 46px;
+  }
+  .stock-table th:not(:first-child),
+  .stock-table td:not(:first-child) { /* talles */
+    width: 52px;
+  }
+
+ 
+  .barcode-table th:nth-child(1),
+  .barcode-table td:nth-child(1) {
+    width: 220px; /* barra */
+    font-family: monospace;
+  }
+  .barcode-table th:nth-child(2),
+  .barcode-table td:nth-child(2) {
+    width: 70px; /* codtal */
+  }
+  .barcode-table th:nth-child(3),
+  .barcode-table td:nth-child(3) {
+    width: 70px; /* equiv */
+  }
+}
+
+/* rebote flechas */
+.arrow-bounce { animation: arrow-bounce 1.1s ease-in-out infinite; }
+@keyframes arrow-bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(4px); }
+}
+
+/* spinner */
+.search-spin { animation: spin 0.9s linear infinite; }
+@keyframes spin { to { transform: rotate(360deg); } }
+
